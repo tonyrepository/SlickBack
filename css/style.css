@@ -17,7 +17,7 @@ h1 {
 }
 
 hr {
-    background: linear-gradient(to right, transparent, #000, transparent);
+    background: linear-gradient(to right, transparent, #FFF, transparent);
     border: 0;
     width: 50vh;
     height: 1px;
