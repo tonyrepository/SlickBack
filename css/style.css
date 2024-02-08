@@ -27,7 +27,39 @@ main {
 }
 
 section {
-    width: 300px;
+    width: clamp(0px, 300px, 30%);
     height: 100%;
+    background: #39F;
+    position: relative;
+    transition: .25s;
+    cursor: pointer;
+}
+
+section:hover {
+    transform: scale(0.95);
+    box-shadow:
+        0 0 5px 5px #666;
+}
+
+button {
     background: #F50;
+    border: 2px solid #A60;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #FFF;
+    font-weight: 1000;
+    font-size: 1.3rem;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .25s;
+}
+
+section:hover button {
+    transform: rotate(0deg);
+    background: #C40;
+    border: 2px solid #820;
 }
