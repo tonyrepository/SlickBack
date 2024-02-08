@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    background: linear-gradient(to right, transparent, #000, transparent);
+    border: 0;
+    width: 50vh;
+    height: 1px;
+    margin: auto;
+}
+
+main {
+    width: 75vw;
+    height: 500px;
+    background-color: #CCC;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+section {
+    width: 300px;
+    height: 100%;
+    background: #F50;
+}
