@@ -6,9 +6,7 @@
 }
 
 body {
-    background: url(../img/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #1f1f1f;
 }
 
 h1 {
@@ -36,21 +34,19 @@ main {
 section {
     width: clamp(0px, 300px, 30%);
     height: 100%;
-    background: #39F;
     position: relative;
     transition: .25s;
     cursor: pointer;
+    filter: grayscale(1);
 }
 
 section:hover {
     transform: scale(0.95);
-    box-shadow:
-        0 0 5px 5px #666;
+    box-shadow: 0 0 5px 5px #666;
+    filter: grayscale(0);
 }
 
 button {
-    background: #F50;
-    border: 2px solid #A60;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -67,6 +63,49 @@ button {
 
 section:hover button {
     transform: rotate(0deg);
-    background: #C40;
+}
+
+#space {
+    background: url(../img/Space/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+#space button {
+    background: #F50;
     border: 2px solid #820;
+}
+
+#space:hover button {
+    background: #820;
+}
+
+#nature {
+    background: url(../img/Nature/christoph-nolte-hUhP8wr_dBo-unsplash.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+#nature button {
+    background: rgb(0, 153, 255);
+    border: 2px solid rgb(0, 60, 116);
+}
+
+#nature:hover button {
+    background: rgb(0, 60, 116);;
+}
+
+#tech {
+    background: url(../img/Technology/apoorv-mittal-D99V0sIsm6E-unsplash.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+#tech button {
+    background: rgb(3, 199, 91);
+    border: 2px solid rgb(0, 104, 47);
+}
+
+#tech:hover button {
+    background: rgb(0, 104, 47);
 }
