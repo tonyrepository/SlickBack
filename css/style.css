@@ -8,6 +8,16 @@
 .slick-next:before,
 .slick-prev:before {
     font-size: 2rem;
+    z-index: 2;
+}
+
+.slick-slide img {
+    max-width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.slick-center {
+    transform: scale(1.1);
 }
 
 html {
@@ -56,7 +66,7 @@ h2 {
 
 main {
     width: 75vw;
-    
+    height: 60%;
     margin: 2.5rem auto;
     display: flex;
     justify-content: space-around;
@@ -68,7 +78,6 @@ div {
 
 section {
     width: clamp(0px, 300px, 30%);
-    
     position: relative;
     transition: .25s;
     cursor: pointer;
