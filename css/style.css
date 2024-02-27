@@ -5,35 +5,70 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.slick-next:before,
+.slick-prev:before {
+    font-size: 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #1f1f1f;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    width: 800px;
+    margin: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 h1 {
     text-align: center;
     color: #FFF;
+    border: 1px solid rgb(4, 142, 255);
+    width: fit-content;
+    margin: auto;
+    padding: .5rem 2rem;
 }
 
-hr {
-    background: linear-gradient(to right, transparent, #FFF, transparent);
-    border: 0;
-    width: 50vh;
-    height: 1px;
-    margin: auto;
+h2 {
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: .25s;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem 0;
 }
 
 main {
     width: 75vw;
-    height: 500px;
-    background-color: #CCC;
-    margin: 20px auto;
+    
+    margin: 2.5rem auto;
     display: flex;
     justify-content: space-around;
 }
 
+div {
+    height: 100vh;
+}
+
 section {
     width: clamp(0px, 300px, 30%);
-    height: 100%;
+    
     position: relative;
     transition: .25s;
     cursor: pointer;
@@ -41,12 +76,11 @@ section {
 }
 
 section:hover {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px 5px #666;
+    box-shadow: 0 0 5px 5px #3d3d3d;
     filter: grayscale(0);
 }
 
-button {
+.btn {
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -59,53 +93,97 @@ button {
     transform: rotate(90deg);
     cursor: pointer;
     transition: .25s;
+    border: none;
+    outline: none;
 }
 
-section:hover button {
+section:hover .btn {
     transform: rotate(0deg);
 }
 
+section:hover h2 {
+    opacity: 1;
+}
+
 #space {
-    background: url(../img/Space/guillermo-ferla-Oze6U2m1oYU-unsplash.jpg);
+    background: url(../img/space/nasa-U2uKrI4lci8-unsplash.jpg);
     background-size: cover;
     background-position-x: 50%;
 }
 
-#space button {
-    background: #F50;
-    border: 2px solid #820;
-}
-
-#space:hover button {
-    background: #820;
+#space .btn {
+    background: rgb(0, 153, 255);
+    
 }
 
 #nature {
-    background: url(../img/Nature/christoph-nolte-hUhP8wr_dBo-unsplash.jpg);
+    background: url(../img/nature/christoph-nolte-hUhP8wr_dBo-unsplash.jpg);
     background-size: cover;
     background-position-x: 50%;
 }
 
-#nature button {
-    background: rgb(0, 153, 255);
-    border: 2px solid rgb(0, 60, 116);
-}
-
-#nature:hover button {
-    background: rgb(0, 60, 116);;
+#nature .btn {
+    background: rgb(3, 199, 91);
 }
 
 #tech {
-    background: url(../img/Technology/apoorv-mittal-D99V0sIsm6E-unsplash.jpg);
+    background: url(../img/tech/apoorv-mittal-D99V0sIsm6E-unsplash.jpg);
     background-size: cover;
     background-position-x: 50%;
 }
 
-#tech button {
-    background: rgb(3, 199, 91);
-    border: 2px solid rgb(0, 104, 47);
+#tech .btn {
+    background: #F50;
 }
 
-#tech:hover button {
-    background: rgb(0, 104, 47);
+.return {
+    color: black;
+    font-weight: 600;
+    margin: 3rem auto;
+    padding: 1rem;
+    display: none;
+    width: fit-content;
+    background: rgb(39, 169, 255);
+}
+
+.return:hover {
+    background: rgb(73, 182, 255);
+    box-shadow: 0 0 5px 5px #3d3d3d;
+}
+
+.go-to-section-2,
+.go-to-section-1 {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 5rem;
+    position: absolute;
+}
+
+.go-to-section-2 {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.go-to-section-2:hover {
+    top: 90.5%;
+}
+
+.go-to-section-1 {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    margin-bottom: 15rem;
+}
+
+.go-to-section-1:hover {
+    top: 99.5%;
+}
+
+#section-1 {
+    padding-top: 2.5rem;
+}
+
+#section-2 {
+    padding-top: 5.5rem;
 }
